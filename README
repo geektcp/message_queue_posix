@@ -1,0 +1,29 @@
+ *    Description:  
+ *
+ *        Version:  1.0
+ *        Created:  2016年6月12日 凌晨3时11分
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  Haiyang Tang (http://geektcp.com), admin@geektcp.com
+ 
+ 
+system v消息队列
+是老的消息队列，在老的系统中大量使用，还会长期保持，功能比较完成，
+ipcs只能查看system v消息，
+可以根据指定的消息优先级返回消息，
+不是线程安全的
+用ipcs查看消息队列
+
+
+posix消息队列
+是新的机制，在新的系统中大量使用，在system v上做了改进，
+线程安全的，
+只返回优先级最高的消息
+有通知功能（mq_notify）
+没有直接的命令查看
+
+
+
+注意：
+posix消息队列的名字最好使用“/”打头，并且只有一个“/”的名字。
